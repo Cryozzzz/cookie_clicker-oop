@@ -3,7 +3,7 @@ var robux_display = document.getElementById("robux-display");
 const click_button = document.getElementById("click-button");
 
 click_button.addEventListener("click", function() {
-    robux += 1;
+    robux ++;
     console.log(robux)
     robux_display.textContent = robux;
 
