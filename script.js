@@ -9,7 +9,7 @@ click_button.addEventListener("click", function() {
 
 })
  
-function buyUpgrade() {
+buy_game_button.addEventListener function buy_game() {
     if (robux >= 10) {
         robux -= 10;
         robux_display.textContent = robux;
