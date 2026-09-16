@@ -9,13 +9,14 @@ click_button.addEventListener("click", function() {
 
 })
  
-buy_game_button.addEventListener function buy_game() {
+const buy_game_button = document.getElementById("buy-game-button");
+buy_game_button.addEventListener("click", function() {
     if (robux >= 10) {
         robux -= 10;
         robux_display.textContent = robux;
-        // Upgrade logic here
+        // Game purchase logic here
     } else {
-        alert("Not enough Robux to buy the upgrade!");
+        alert("Not enough Robux to buy the game!");
     }
 }
-
+)
