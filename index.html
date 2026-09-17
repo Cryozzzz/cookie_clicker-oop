@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="m-0 p-0">
     <header>
         <section class="header-container-left">
             <div class="logo">
@@ -16,25 +18,21 @@
             <h1>Roblox Clicker</h1>
         </section>
         <section class="header-container-right">
-            <p class="header-margin">Totaal verdiend:</p>
-             <span class="header-margin" id="total-robux-display">
-                0
-            </span>
-                <p class="header-margin header-gap">R$</p>
-            <div class="save-container header-margin">
+            <p>Totaal verdiend:</p> <span id="total-robux-display"> 0</span>R$
+            <div class="save-container">
                 <button class="save-button">save</button>
             </div>
         </section>
     </header>
-    <main>
+    <main class="ml-4">
 
-        <section class="info-container">
-            <container class="robux-info">
+        <section class="info-section">
+            <div class="border">
                 <h2>Robux</h2>
-                <span class="robux-amount">0</span> R$
-                <span class="robux-per-second">0</span> R$/s
-                <span class="robux-per-click">0</span> R$/click
-            </container>
+                <div class="info-sub"><span class="robux-amount">0</span> R$</div>
+                <div class="info-sub"><span class="robux-per-second">0</span> R$/s</div>
+                <div class="info-sub"><span class="robux-per-click">0</span> R$/click</div>
+            </div>
 
             <section class="achievements">
                 <h2>Achievements</h2>
@@ -68,41 +66,43 @@
             </container>
             <container>
                 <h2>Mijn Games</h2>
-                <div>
-                    <div id="game-1"></div>
+                <div class="game-class">
+                    <div id="game-1">example</div>
                     <div id="game-1-amount">0</div>
                 </div>
-                <div>
-                    <div id="game-2"></div>
+                <div class="game-class">
+                    <div id="game-2">example</div>
                     <div id="game-2-amount">0</div>
                 </div>
-                <div>
-                    <div id="game-3"></div>
+                <div class="game-class">
+                    <div id="game-3">example</div>
                     <div id="game-3-amount">0</div>
                 </div>
-                <div>
-                    <div id="game-4"></div>
+                <div class="game-class">
+                    <div id="game-4">example</div>
                     <div id="game-4-amount">0</div>
                 </div>
-                <div>
-                    <div id="game-5"></div>
+                <div class="game-class">
+                    <div id="game-5">example</div>
                     <div id="game-5-amount">0</div>
                 </div>
             </container>
         </section>
 
         <section class="main-container">
-            <container class="buff-container">
+            <!-- <container class="buff-container">
                 <img src="" alt="">
                 <span> </span>
                 <p></p>
                 <button></button>
-            </container>
+            </container> -->
 
             <container>
-                <div class="clicker-info">
-                    <span id="robux-display">0</span>
-                    <p>R$</p>
+                <div class="robux-info">
+                    <div class="display-robux">
+                        <span id="robux-display">0</span>
+                        <p>R$</p>
+                    </div>
                     <div>
                         robux per second: <span id="robux-per-second">0</span> R$/s
                         robux per click: <span id="robux-per-click">0</span> R$/click

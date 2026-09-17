@@ -60,3 +60,4 @@ function update_robux_per_second() {
     console.log(robux_per_second)
 }
 setInterval(update_robux_per_second, 1000);
+    
