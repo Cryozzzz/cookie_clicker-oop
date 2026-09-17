@@ -1,11 +1,5 @@
-body{
-    padding: 0;
-    margin: 0;
-}
 
-main {
-    margin-left: 1em;
-}
+
 
 .roblox-logo {
     width: 5em;
@@ -51,4 +45,9 @@ header {
     height: fit-content;
     display: flex;
     flex-direction: row;
+}
+
+.game-class {
+    display: flex;
+    gap: 3em;
 }
