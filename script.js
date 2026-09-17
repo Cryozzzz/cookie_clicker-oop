@@ -1,5 +1,7 @@
 var robux = 0;
-var robux_per_second = 0;
+var game_1 = 0;
+var game_2 = 0;
+var robux_per_second = game_1 + game_2;
 var robux_per_click = 1;
 var total_robux = robux + robux_spent;
 var robux_spent = 0;
@@ -24,9 +26,8 @@ buy_game_button_1.addEventListener("click", function() {
         robux_spent += 10;
         robux_display.textContent = robux;
         // Game purchase logic here
-        robux_per_second ++;
+        game_1 += 1;
         robux_per_second_display.textContent = robux_per_second;
-        console.log(robux_per_second)
     } else {
         alert("Not enough Robux to buy the game!");
     }
@@ -40,8 +41,8 @@ buy_game_button_2.addEventListener("click", function() {
         robux_spent += 20;
         robux_display.textContent = robux;
         // Game purchase logic here
-        robux_per_second += 2;
-        robux_per_second_display.textContent = robux_per_second;
+        game_2 += 2;
+
     } else {
         alert("Not enough Robux to buy the game!");
     }
@@ -50,8 +51,10 @@ buy_game_button_2.addEventListener("click", function() {
 
 function update_robux_per_second() {
     robux += robux_per_second;
+    robux_per_second = game_1 + game_2;
     robux_display.textContent = robux;
     total_robux = robux + robux_spent;
+    robux_per_second_display.textContent = robux_per_second;
     total_robux_display.textContent = total_robux;
 
     console.log(robux_per_second)

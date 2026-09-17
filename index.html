@@ -5,20 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <section class="header-container-left">
             <div class="logo">
-                R
+                <p class="logo-text">R</p>
             </div>
             <h1>Roblox Clicker</h1>
         </section>
         <section class="header-container-right">
-        <p>Totaal verdiend:</p>    <span id="total-robux-display"> 0</span>R$
-            <div class="save-container">
+            <p class="header-margin">Totaal verdiend:</p>
+             <span class="header-margin" id="total-robux-display">
+                0
+            </span>
+                <p class="header-margin header-gap">R$</p>
+            <div class="save-container header-margin">
                 <button class="save-button">save</button>
             </div>
         </section>
@@ -46,10 +49,22 @@
             </section>
             <container class="thema's">
                 <h2>Thema's</h2>
-                <div><h3>Default</h3><p>🔒50k</p></div class="thema-box" id="thema-1">
-                <div><h3>Ocean</h3><p>🔒200k</p></div class="thema-box" id="thema-2">
-                <div><h3>Forest</h3><p>🔒1M</p></div class="thema-box" id="thema-3">
-                <div><h3>Galaxy</h3><p>🔒20M</p></div class="thema-box" id="thema-4">
+                <div>
+                    <h3>Default</h3>
+                    <p>🔒50k</p>
+                </div class="thema-box" id="thema-1">
+                <div>
+                    <h3>Ocean</h3>
+                    <p>🔒200k</p>
+                </div class="thema-box" id="thema-2">
+                <div>
+                    <h3>Forest</h3>
+                    <p>🔒1M</p>
+                </div class="thema-box" id="thema-3">
+                <div>
+                    <h3>Galaxy</h3>
+                    <p>🔒20M</p>
+                </div class="thema-box" id="thema-4">
             </container>
             <container>
                 <h2>Mijn Games</h2>
@@ -92,7 +107,7 @@
                         robux per second: <span id="robux-per-second">0</span> R$/s
                         robux per click: <span id="robux-per-click">0</span> R$/click
                     </div>
-                    
+
                 </div>
                 <container class="click-container">
                     <button id="click-button">

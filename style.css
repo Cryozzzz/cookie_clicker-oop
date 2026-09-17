@@ -9,7 +9,20 @@ main {
 
 .roblox-logo {
     width: 5em;
+}
 
+.logo{
+    background-color: black;
+    width: 3rem;
+    height: 2.5rem;
+    margin:auto;
+}
+
+.logo-text {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
 }
 
 header {
@@ -27,12 +40,15 @@ header {
 
 .header-container-right {
     display: flex;
-    gap: 1em;
-    margin-top: 2em;
+
 }
 
-.logo {
-    margin-top: 2rem;
+.header-margin {
+    margin: auto;
+}
+.header-gap {
+    margin-right: 1em;
+    display: flex;
 }
 
 .robux-info {
@@ -52,3 +68,5 @@ header {
     display: flex;
     flex-direction: row;
 }
+
+
