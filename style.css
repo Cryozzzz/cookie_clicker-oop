@@ -1,4 +1,54 @@
-.roblox-logo{
+body{
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    margin-left: 1em;
+}
+
+.roblox-logo {
     width: 5em;
-    
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.header-container-left {
+    display: flex;
+    gap: 1em;
+}
+
+.header-container-right {
+    display: flex;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.logo {
+    margin-top: 2rem;
+}
+
+.robux-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.achievement-con {
+    display: grid;
+    grid-template-columns: repeat(3, 5em);
+    grid-template-rows: repeat(2, 4em);
+}
+
+.thema-box{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
 }
