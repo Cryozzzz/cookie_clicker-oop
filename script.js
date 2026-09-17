@@ -9,10 +9,10 @@ var robux_display = document.getElementById("robux-display");
 var robux_per_second_display = document.getElementById("robux-per-second");
 const click_button = document.getElementById("click-button");
 
-// click_button.addEventListener("click", function() {
-//     robux ++;
-//     console.log(robux)
-//     robux_display.textContent = robux;
+click_button.addEventListener("click", function() {
+    robux ++;
+    console.log(robux)
+    robux_display.textContent = robux;
 
 })
 
@@ -30,12 +30,8 @@ buy_game_button_1.addEventListener("click", function() {
     } else {
         alert("Not enough Robux to buy the game!");
     }
-
-    displayWhatsInsideThisMiniGame(){
-        console.log(this.players);
-        console.log(this.map);
-    }   
 }
+)
 
 const buy_game_button_2 = document.getElementById("buy-game-button-2");
 buy_game_button_2.addEventListener("click", function() {
