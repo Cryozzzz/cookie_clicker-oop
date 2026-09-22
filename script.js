@@ -49,6 +49,7 @@ class Game {
 
 var game_1 = new Game(10, 1, "Game 1", 0);
 var game_2 = new Game(20, 2, "Game 2", 0);
+var game_3 = new Game(30, 3, "Game 3", 0);
 
 function update_ui(){
     robux_per_second = game_1_production + game_2_production;
@@ -62,8 +63,11 @@ function update_ui(){
 
 const buy_game_button_1 = document.getElementById("buy-game-button-1");
 const buy_game_button_2 = document.getElementById("buy-game-button-2");
+
 buy_game_button_1.addEventListener("click", game_1.buy.bind(game_1));
 buy_game_button_2.addEventListener("click", game_2.buy.bind(game_2));
+
+
 
 
 
