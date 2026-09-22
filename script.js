@@ -44,6 +44,7 @@ class Game {
         if (robux >= this.cost) {
             robux -= this.cost;
             this.amount += 1;
+            this.cost = Math.round(this.cost * 1.35);   
             update_ui();
         } else {
             alert("Not enough Robux to buy " + this.name + "!");
@@ -75,6 +76,18 @@ const game_amount_displays = [
     document.getElementById("game_9_amount"),
     document.getElementById("game_10_amount")
 ];
+    const game_cost_displays = [
+    document.getElementById("game_1_cost"),
+    document.getElementById("game_2_cost"),
+    document.getElementById("game_3_cost"),
+    document.getElementById("game_4_cost"),
+    document.getElementById("game_5_cost"),
+    document.getElementById("game_6_cost"),
+    document.getElementById("game_7_cost"),
+    document.getElementById("game_8_cost"),
+    document.getElementById("game_9_cost"),
+    document.getElementById("game_10_cost")
+];
 
 function update_ui() {
     robux_per_second = 0;
@@ -101,6 +114,9 @@ function update_ui() {
     games.forEach((game, index) => {
         if (game_amount_displays[index]) {
             game_amount_displays[index].textContent = game.amount;
+        }
+        if (game_cost_displays[index]) {
+            game_cost_displays[index].textContent = game.cost + "R$";
         }
     });
 }
