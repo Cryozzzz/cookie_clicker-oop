@@ -53,15 +53,15 @@ class Game {
 }
 
 var game_1 = new Game(10, 1, "Game 1", 0);
-var game_2 = new Game(100, 2, "Game 2", 0);
-var game_3 = new Game(35, 5, "Game 3", 0);
-var game_4 = new Game(60, 15, "Game 4", 0);
-var game_5 = new Game(100, 30, "Game 5", 0);
-var game_6 = new Game(200, 60, "Game 6", 0);
-var game_7 = new Game(400, 120, "Game 7", 0);
-var game_8 = new Game(800, 250, "Game 8", 0);
-var game_9 = new Game(1500, 500, "Game 9", 0);
-var game_10 = new Game(3000, 1000, "Game 10", 0);
+var game_2 = new Game(50, 2, "Game 2", 0);
+var game_3 = new Game(100, 5, "Game 3", 0);
+var game_4 = new Game(250, 15, "Game 4", 0);
+var game_5 = new Game(700, 30, "Game 5", 0);
+var game_6 = new Game(1000, 60, "Game 6", 0);
+var game_7 = new Game(1250, 120, "Game 7", 0);
+var game_8 = new Game(1800, 250, "Game 8", 0);
+var game_9 = new Game(2000, 500, "Game 9", 0);
+var game_10 = new Game(5000, 1000, "Game 10", 0);
 
 const games = [game_1, game_2, game_3, game_4, game_5, game_6, game_7, game_8, game_9, game_10];
 const game_amount_displays = [
