@@ -150,3 +150,16 @@ function update_robux_per_second() {
 setInterval(update_ui, 10)
 setInterval(update_robux_per_second, 1000);
     
+
+class Frisdrank {
+    name;
+    color;
+    inhoud;
+
+
+    drink(amount){
+        this.inhoud -= amount;
+    }
+}
+
+let 
