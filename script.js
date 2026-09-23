@@ -2,6 +2,7 @@ var robux = 0;
 var total_robux = 0;
 var robux_per_second = 0;
 var robux_per_click = 1;
+var total_times_clicked = 0
 var total_robux_display = document.getElementById("total-robux-display");
 var robux_per_click_display = document.getElementById("robux-per-click");
 var robux_display = document.getElementById("robux-display");
@@ -24,6 +25,7 @@ var game_10_production = 0;
 click_button.addEventListener("click", function () {
     robux += robux_per_click;
     total_robux += robux_per_click;
+    total_times_clicked ++
     update_ui();
 });
 
@@ -44,7 +46,7 @@ class Game {
         if (robux >= this.cost) {
             robux -= this.cost;
             this.amount += 1;
-            this.cost = Math.round(this.cost * 1.35);   
+            this.cost = Math.round(this.cost * 1.15);   
             update_ui();
         } else {
             alert("Not enough Robux to buy " + this.name + "!");
@@ -151,15 +153,134 @@ setInterval(update_ui, 10)
 setInterval(update_robux_per_second, 1000);
     
 
-class Frisdrank {
-    name;
-    color;
-    inhoud;
 
 
-    drink(amount){
-        this.inhoud -= amount;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let achievement_1
+let achievement_2
+let achievement_3
+let achievement_4
+let achievement_5
+let achievement_6
+
+function achievement_1_requirement() {
+    if (total_robux === 40){
+        console.log("you have obtained achievement 1!")
+    }
+
+}
+
+
+function achievement_2_requirement() {
+    if(total_times_clicked === 10){
+        console.log("you have obtained achievement 2!")
     }
 }
 
-let 
+
+function achievement_checker() {
+    
+    achievement_1_requirement()
+    achievement_2_requirement()
+
+}
+setInterval(achievement_checker, 1)
+
+
+
+
+
+
