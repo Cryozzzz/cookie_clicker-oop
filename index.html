@@ -144,9 +144,9 @@
 
         <section class="">
             <section class="choose-section flex">
-                <div class="border-l border-black p-2 pl-">Games Store</div>
-                <div class="border- border-black p-2 ">Upgrades</div>
-                <div class="border- border-black p-2 mr-2">Stats</div>
+                <div id="games-choice" class="border-l border-black p-2 pl-">Games Store</div>
+                <div id="upgrades-choice" class="border- border-black p-2 ">Upgrades</div>
+                <div id="stats-choice" class="border- border-black p-2 mr-2">Stats</div>
             </section>
 
             <!--
@@ -157,7 +157,7 @@
 
             <section id="games-section" class="">
                 <section class="games border border-black p-2 flex flex-col gap-2">
-                    <div id="game-1" class="flex border items-center p-2 max-w-240px">
+                    <div id="game-1" class="flex border items-center p-2 justify-between">
                         <div class="icon flex justify-center items-center border border-black w-10 h-10">🔫</div>
                         <div class="ml-2">
                             <div class="flex gap-3">
@@ -167,7 +167,10 @@
                                 </div>
                             </div>
                             <p class="text-gray-400 text-xs">shoot other people</p>
-                            <p class="text-gray-400 text-xs">+.. R$/s</p>
+                            <div class="flex">
+                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">R$/s</p>
+                            </div>
                         </div>
                         <div class="ml-10 ">
                             <p class="font-semibold text-xs"><span id="game_1_cost">10R$</span></p>
@@ -176,17 +179,20 @@
                         </div>
                     </div>
 
-                    <div id="game-2" class="flex border items-center p-2">
-                        <div class="icon flex justify-center items-center border border-black w-10 h-10"></div>
+                    <div id="game-2" class="flex border items-center p-2 justify-between">
+                        <div class="icon flex justify-center items-center border border-black w-10 h-10">🍎</div>
                         <div class="ml-2">
                             <div class="flex gap-3">
-                                <h3 class="font-bold text-xs">example</h3>
+                                <h3 class="font-bold text-xs">Blox Fruits</h3>
                                 <div class="text-xs bg-black text-white p-1 rounded-base flex gap-1">
                                     x <span id="game_2_amount">0</span>
                                 </div>
                             </div>
-                            <p class="text-gray-400 text-xs">Shoot other people</p>
-                            <p class="text-gray-400 text-xs">+.. R$/s</p>
+                            <p class="text-gray-400 text-xs">Farm devil fruits</p>
+                            <div class="flex">
+                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">R$/s</p>
+                            </div>
                         </div>
                         <div class="ml-10 ">
                             <p class="font-semibold text-xs"><span id="game_2_cost">100R$</span></p>
@@ -195,17 +201,20 @@
                         </div>
                     </div>
 
-                    <div id="game-3" class="flex border items-center p-2">
-                        <div class="icon flex justify-center items-center border border-black w-10 h-10"></div>
+                    <div id="game-3" class="flex border items-center p-2 justify-between">
+                        <div class="icon flex justify-center items-center border border-black w-10 h-10">🐶</div>
                         <div class="ml-2">
                             <div class="flex gap-3">
-                                <h3 class="font-bold text-xs">example</h3>
+                                <h3 class="font-bold text-xs">Adopt Me</h3>
                                 <div class="text-xs bg-black text-white p-1 rounded-base flex gap-1">
                                     x <span id="game_3_amount">0</span>
                                 </div>
                             </div>
-                            <p class="text-gray-400 text-xs">Shoot other people</p>
-                            <p class="text-gray-400 text-xs">+.. R$/s</p>
+                            <p class="text-gray-400 text-xs">Raise pets</p>
+                            <div class="flex">
+                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">R$/s</p>
+                            </div>
                         </div>
                         <div class="ml-10 ">
                             <p class="font-semibold text-xs"><span id="game_3_cost">35R$</span></p>
@@ -214,17 +223,20 @@
                         </div>
                     </div>
 
-                    <div id="game-4" class="flex border items-center p-2">
-                        <div class="icon flex justify-center items-center border border-black w-10 h-10"></div>
+                    <div id="game-4" class="flex border items-center p-2 justify-between">
+                        <div class="icon flex justify-center items-center border border-black w-10 h-10">🔫</div>
                         <div class="ml-2">
                             <div class="flex gap-3">
-                                <h3 class="font-bold text-xs">example</h3>
+                                <h3 class="font-bold text-xs">Rivals</h3>
                                 <div class="text-xs bg-black text-white p-1 rounded-base flex gap-1">
                                     x <span id="game_4_amount">0</span>
                                 </div>
                             </div>
-                            <p class="text-gray-400 text-xs">Shoot other people</p>
-                            <p class="text-gray-400 text-xs">+.. R$/s</p>
+                            <p class="text-gray-400 text-xs">Duel against people</p>
+                            <div class="flex">
+                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">R$/s</p>
+                            </div>
                         </div>
                         <div class="ml-10 ">
                             <p class="font-semibold text-xs"><span id="game_4_cost">60R$</span></p>
@@ -233,17 +245,20 @@
                         </div>
                     </div>
 
-                    <div id="game-5" class="flex border items-center p-2">
-                        <div class="icon flex justify-center items-center border border-black w-10 h-10"></div>
+                    <div id="game-5" class="flex border items-center p-2 justify-between">
+                        <div class="icon flex justify-center items-center border border-black w-10 h-10">⚔️</div>
                         <div class="ml-2">
                             <div class="flex gap-3">
-                                <h3 class="font-bold text-xs">example</h3>
+                                <h3 class="font-bold text-xs">Deepwoken</h3>
                                 <div class="text-xs bg-black text-white p-1 rounded-base flex gap-1">
                                     x <span id="game_5_amount">0</span>
                                 </div>
                             </div>
-                            <p class="text-gray-400 text-xs">Shoot other people</p>
-                            <p class="text-gray-400 text-xs">+.. R$/s</p>
+                            <p class="text-gray-400 text-xs">Survive the world</p>
+                            <div class="flex">
+                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">R$/s</p>
+                            </div>
                         </div>
                         <div class="ml-10 ">
                             <p class="font-semibold text-xs"><span id="game_5_cost">100R$</span></p>
@@ -252,17 +267,20 @@
                         </div>
                     </div>
 
-                    <div id="game-6" class="flex border items-center p-2">
-                        <div class="icon flex justify-center items-center border border-black w-10 h-10"></div>
+                    <div id="game-6" class="flex border items-center p-2 justify-between">
+                        <div class="icon flex justify-center items-center border border-black w-10 h-10">🏠</div>
                         <div class="ml-2">
                             <div class="flex gap-3">
-                                <h3 class="font-bold text-xs">example</h3>
+                                <h3 class="font-bold text-xs">Brookhaven</h3>
                                 <div class="text-xs bg-black text-white p-1 rounded-base flex gap-1">
                                     x <span id="game_6_amount">0</span>
                                 </div>
                             </div>
-                            <p class="text-gray-400 text-xs">Shoot other people</p>
-                            <p class="text-gray-400 text-xs">+.. R$/s</p>
+                            <p class="text-gray-400 text-xs">Roleplay life</p>
+                            <div class="flex">
+                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">R$/s</p>
+                            </div>
                         </div>
                         <div class="ml-10 ">
                             <p class="font-semibold text-xs"><span id="game_6_cost">200R$</span></p>
@@ -271,17 +289,20 @@
                         </div>
                     </div>
 
-                    <div id="game-7" class="flex border items-center p-2">
-                        <div class="icon flex justify-center items-center border border-black w-10 h-10"></div>
+                    <div id="game-7" class="flex border items-center p-2 justify-between">
+                        <div class="icon flex justify-center items-center border border-black w-10 h-10">🔴</div>
                         <div class="ml-2">
                             <div class="flex gap-3">
-                                <h3 class="font-bold text-xs">example</h3>
+                                <h3 class="font-bold text-xs">Blade ball</h3>
                                 <div class="text-xs bg-black text-white p-1 rounded-base flex gap-1">
                                     x <span id="game_7_amount">0</span>
                                 </div>
                             </div>
-                            <p class="text-gray-400 text-xs">Shoot other people</p>
-                            <p class="text-gray-400 text-xs">+.. R$/s</p>
+                            <p class="text-gray-400 text-xs">Slash the ball</p>
+                            <div class="flex">
+                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">R$/s</p>
+                            </div>
                         </div>
                         <div class="ml-10 ">
                             <p class="font-semibold text-xs"><span id="game_7_cost">400R$</span></p>
@@ -290,17 +311,20 @@
                         </div>
                     </div>
 
-                    <div id="game-8" class="flex border items-center p-2">
-                        <div class="icon flex justify-center items-center border border-black w-10 h-10"></div>
+                    <div id="game-8" class="flex border items-center p-2 justify-between">
+                        <div class="icon flex justify-center items-center border border-black w-10 h-10">🚪</div>
                         <div class="ml-2">
                             <div class="flex gap-3">
-                                <h3 class="font-bold text-xs">example</h3>
+                                <h3 class="font-bold text-xs">Doors</h3>
                                 <div class="text-xs bg-black text-white p-1 rounded-base flex gap-1">
                                     x <span id="game_8_amount">0</span>
                                 </div>
                             </div>
-                            <p class="text-gray-400 text-xs">Shoot other people</p>
-                            <p class="text-gray-400 text-xs">+.. R$/s</p>
+                            <p class="text-gray-400 text-xs">Escape the doors</p>
+                            <div class="flex">
+                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">R$/s</p>
+                            </div>
                         </div>
                         <div class="ml-10 ">
                             <p class="font-semibold text-xs"><span id="game_8_cost">800R$</span></p>
@@ -309,17 +333,20 @@
                         </div>
                     </div>
 
-                    <div id="game-9" class="flex border items-center p-2">
-                        <div class="icon flex justify-center items-center border border-black w-10 h-10"></div>
+                    <div id="game-9" class="flex border items-center p-2 justify-between">
+                        <div class="icon flex justify-center items-center border border-black w-10 h-10">🐷</div>
                         <div class="ml-2">
                             <div class="flex gap-3">
-                                <h3 class="font-bold text-xs">example</h3>
+                                <h3 class="font-bold text-xs">Piggy</h3>
                                 <div class="text-xs bg-black text-white p-1 rounded-base flex gap-1">
                                     x <span id="game_9_amount">0</span>
                                 </div>
                             </div>
-                            <p class="text-gray-400 text-xs">Shoot other people</p>
-                            <p class="text-gray-400 text-xs">+.. R$/s</p>
+                            <p class="text-gray-400 text-xs">Survive piggy</p>
+                            <div class="flex">
+                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">R$/s</p>
+                            </div>
                         </div>
                         <div class="ml-10 ">
                             <p class="font-semibold text-xs"><span id="game_9_cost">1500R$</span></p>
@@ -328,17 +355,20 @@
                         </div>
                     </div>
 
-                    <div id="game-10" class="flex border items-center p-2">
-                        <div class="icon flex justify-center items-center border border-black w-10 h-10"></div>
+                    <div id="game-10" class="flex border items-center p-2 justify-between">
+                        <div class="icon flex justify-center items-center border border-black w-10 h-10">🚂</div>
                         <div class="ml-2">
                             <div class="flex gap-3">
-                                <h3 class="font-bold text-xs">example</h3>
+                                <h3 class="font-bold text-xs">Dead Rails</h3>
                                 <div class="text-xs bg-black text-white p-1 rounded-base flex gap-1">
                                     x <span id="game_10_amount">0</span>
                                 </div>
                             </div>
-                            <p class="text-gray-400 text-xs">Shoot other people</p>
-                            <p class="text-gray-400 text-xs">+.. R$/s</p>
+                            <p class="text-gray-400 text-xs">Escape America</p>
+                            <div class="flex">
+                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">R$/s</p>
+                            </div>
                         </div>
                         <div class="ml-10 ">
                             <p class="font-semibold text-xs"><span id="game_10_cost">3000R$</span></p>
@@ -347,6 +377,7 @@
                         </div>
                     </div>
                 </section>
+            </section>    
 
                 <!--
                 ==================================================
@@ -354,7 +385,7 @@
                 ==================================================
                 -->
 
-                <section id="upgrades-section" class="">
+                <section id="upgrades-section" class="hidden">
                     <section class="games border border-black p-2 flex flex-col gap-2">
                         <div id="game-1" class="flex border items-center p-2">
                             <div class="icon flex justify-center items-center border border-black w-10 h-10">🔫</div>
@@ -369,7 +400,7 @@
                             <div class="ml-10 ">
                                 <p class="font-semibold text-xs">15R$</p>
                                 <button class="bg-black text-white text-xs font-semibold p-1 pl-2 pr-2" id="buy-game-1"
-                                    button>buy</button>
+                                    button>Buy</button>
                             </div>
                         </div>
 
@@ -386,7 +417,7 @@
                             <div class="ml-10 ">
                                 <p class="font-semibold text-xs">15R$</p>
                                 <button class="bg-black text-white text-xs font-semibold p-1 pl-2 pr-2"
-                                    id="buy-game-button-4">buy</button>
+                                    id="buy-game-button-4">Buy</button>
                             </div>
                         </div>
 
@@ -403,7 +434,7 @@
                             <div class="ml-10 ">
                                 <p class="font-semibold text-xs">15R$</p>
                                 <button class="bg-black text-white text-xs font-semibold p-1 pl-2 pr-2"
-                                    id="buy-game-button-3">buy</button>
+                                    id="buy-game-button-3">Buy</button>
                             </div>
                         </div>
 
@@ -420,7 +451,7 @@
                             <div class="ml-10 ">
                                 <p class="font-semibold text-xs">15R$</p>
                                 <button class="bg-black text-white text-xs font-semibold p-1 pl-2 pr-2"
-                                    id="buy-game-button-4">buy</button>
+                                    id="buy-game-button-4">Buy</button>
                             </div>
                         </div>
 
@@ -437,7 +468,7 @@
                             <div class="ml-10 ">
                                 <p class="font-semibold text-xs">15R$</p>
                                 <button class="bg-black text-white text-xs font-semibold p-1 pl-2 pr-2"
-                                    id="buy-game-button-5">buy</button>
+                                    id="buy-game-button-5">Buy</button>
                             </div>
                         </div>
 
@@ -454,7 +485,7 @@
                             <div class="ml-10 ">
                                 <p class="font-semibold text-xs">15R$</p>
                                 <button class="bg-black text-white text-xs font-semibold p-1 pl-2 pr-2"
-                                    id="buy-game-button-6">buy</button>
+                                    id="buy-game-button-6">Buy</button>
                             </div>
                         </div>
 
@@ -471,7 +502,7 @@
                             <div class="ml-10 ">
                                 <p class="font-semibold text-xs">15R$</p>
                                 <button class="bg-black text-white text-xs font-semibold p-1 pl-2 pr-2"
-                                    id="buy-game-button-7">buy</button>
+                                    id="buy-game-button-7">Buy</button>
                             </div>
                         </div>
 
@@ -488,7 +519,7 @@
                             <div class="ml-10 ">
                                 <p class="font-semibold text-xs">15R$</p>
                                 <button class="bg-black text-white text-xs font-semibold p-1 pl-2 pr-2"
-                                    id="buy-game-button-8">buy</button>
+                                    id="buy-game-button-8">Buy</button>
                             </div>
                         </div>
 
@@ -505,7 +536,7 @@
                             <div class="ml-10 ">
                                 <p class="font-semibold text-xs">15R$</p>
                                 <button class="bg-black text-white text-xs font-semibold p-1 pl-2 pr-2"
-                                    id="buy-game-button-9">buy</button>
+                                    id="buy-game-button-9">Buy</button>
                             </div>
                         </div>
 
@@ -522,10 +553,11 @@
                             <div class="ml-10 ">
                                 <p class="font-semibold text-xs">15R$</p>
                                 <button class="bg-black text-white text-xs font-semibold p-1 pl-2 pr-2"
-                                    id="buy-game-button-10">buy</button>
+                                    id="buy-game-button-10">Buy</button>
                             </div>
                         </div>
                     </section>
+                </section>    
 
                     <!--
                 ==================================================
@@ -533,7 +565,7 @@
                 ==================================================
                 -->
 
-                    <section id="stats-section" class="">
+                    <section id="stats-section" class="hidden">
                         <section class="games border border-black p-2 flex flex-col gap-2">
                             <div id="game-1" class="flex border items-center justify-between p-2">
                                 <div class="flex items-baseline">
@@ -637,9 +669,10 @@
                                 </div>
                             </div>
                         </section>
+                    </section>    
 
 
-<!-- 
+                        <!-- 
                         <h2>Stats</h2>
                         <container class="stats-box">
                             <div>
