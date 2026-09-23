@@ -284,3 +284,30 @@ setInterval(achievement_checker, 1)
 
 
 
+
+const game_choice = document.getElementById("games-choice");
+const upgrade_choice = document.getElementById("upgrades-choice");
+const stat_choice =document.getElementById("stats-choice");
+
+const game_section =document.getElementById("games-section");
+const upgrade_section =document.getElementById("upgrades-section");
+const stat_section =document.getElementById("stats-section");
+
+game_choice.addEventListener("click", function () {
+    game_section.classList.remove("hidden");
+    upgrade_section.classList.add("hidden");
+    stat_section.classList.add("hidden");
+});
+
+upgrade_choice.addEventListener("click", function () {
+    game_section.classList.add("hidden");
+    upgrade_section.classList.remove("hidden");
+    stat_section.classList.add("hidden");
+});
+
+stat_choice.addEventListener("click", function () {
+    game_section.classList.add("hidden");
+    upgrade_section.classList.add("hidden");
+    stat_section.classList.remove("hidden");
+});
+
