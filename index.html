@@ -21,7 +21,7 @@
         </section>
         <section class="flex">
             <p class="m-auto mr-1 text-[#f5f5f5]">Total earned:</p>
-            <span class="m-auto mr-1 text-[#f5f5f5]" id="total-robux-display"> 0</span>
+            <span class="m-auto mr-1 text-[#f5f5f5]" id="total-robux-display-1"> 0</span>
             <p class="m-auto mr-3 text-[#f5f5f5]">R$</p>
             <div class="save-container">
                 <button class="bg-[#242424] border border-[#f5f5f5] py-2 px-2 m-auto text-[#f5f5f5]">save</button>
@@ -33,9 +33,9 @@
         <section class="w-72 shrink-0 bg-[#242424]">
             <div class="border-r border-b max-w-72 border-white">
                 <h2 class="ml-2 text-base text-gray-400">Robux</h2>
-                <div class="ml-2 text-2xl font-extrabold text-white"><span class="">0</span> R$/s</div>
-                <div class="ml-2 text-gray-400"><span class="">0</span> R$</div>
-                <div class="ml-2 text-gray-400"><span class="">0</span> R$/click</div>
+                <div class="ml-2 text-2xl font-extrabold text-white"><span id="robux-display-2">0</span> R$</div>
+                <div class="ml-2 text-gray-400"><span id="robux-per-second-2">0</span> R$/s</div>
+                <div class="ml-2 text-gray-400"><span id="robux-per-click-2">0</span> R$/click</div>
             </div>
 
 
@@ -44,8 +44,6 @@
                                 ACHIEVEMENTS SECTION
                 ==================================================
                 -->
-
-            ```html
             <section class=" w- max-w-72 mb-2 border-r border-white">
                 <h2 class="text-lg text-gray-300 ml-2">Achievements</h2>
                 <container class="grid grid-cols-2 w-fit gap-3 ml-2">
@@ -197,13 +195,13 @@
             <container>
                 <div class="text-center">
                     <div class="display-robux flex justify-center items-baseline gap-2 ">
-                        <span class="text-3xl font-bold" id="robux-display">0</span>
+                        <span class="text-3xl font-bold" id="robux-display-1">0</span>
                         <p class="text-lg text-gray-400 font-bold">R$</p>
                     </div>
                     <div>
-                        <span class="text-gray-400" id="robux-per-second">0</span> <span
+                        <span class="text-gray-400" id="robux-per-second-1">0</span> <span
                             class="text-gray-400">R$/s</span>
-                        <span class="text-gray-400" id="robux-per-click">0</span> <span
+                        <span class="text-gray-400" id="robux-per-click-1">0</span> <span
                             class="text-gray-400">R$/click</span>
                     </div>
 
@@ -247,7 +245,7 @@
                             </div>
                             <p class="text-gray-400 text-xs">shoot other people</p>
                             <div class="flex">
-                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">+<span id="game_1_per_second_per_item">1</span></p>
                                 <p class="text-gray-400 text-xs">R$/s</p>
                             </div>
                         </div>
@@ -271,7 +269,7 @@
                             </div>
                             <p class="text-gray-400 text-xs">Farm devil fruits</p>
                             <div class="flex">
-                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">+<span id="game_2_per_second_per_item">2</span></p>
                                 <p class="text-gray-400 text-xs">R$/s</p>
                             </div>
                         </div>
@@ -294,7 +292,7 @@
                             </div>
                             <p class="text-gray-400 text-xs">Raise pets</p>
                             <div class="flex">
-                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">+<span id="game_3_per_second_per_item">5</span></p>
                                 <p class="text-gray-400 text-xs">R$/s</p>
                             </div>
                         </div>
@@ -317,7 +315,7 @@
                             </div>
                             <p class="text-gray-400 text-xs">Duel against people</p>
                             <div class="flex">
-                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">+<span id="game_4_per_second_per_item">15</span></p>
                                 <p class="text-gray-400 text-xs">R$/s</p>
                             </div>
                         </div>
@@ -340,7 +338,7 @@
                             </div>
                             <p class="text-gray-400 text-xs">Survive the world</p>
                             <div class="flex">
-                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">+<span id="game_5_per_second_per_item">30</span></p>
                                 <p class="text-gray-400 text-xs">R$/s</p>
                             </div>
                         </div>
@@ -363,7 +361,7 @@
                             </div>
                             <p class="text-gray-400 text-xs">Roleplay life</p>
                             <div class="flex">
-                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">+<span id="game_6_per_second_per_item">60</span></p>
                                 <p class="text-gray-400 text-xs">R$/s</p>
                             </div>
                         </div>
@@ -386,7 +384,7 @@
                             </div>
                             <p class="text-gray-400 text-xs">Slash the ball</p>
                             <div class="flex">
-                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">+<span id="game_7_per_second_per_item">120</span></p>
                                 <p class="text-gray-400 text-xs">R$/s</p>
                             </div>
                         </div>
@@ -409,7 +407,7 @@
                             </div>
                             <p class="text-gray-400 text-xs">Escape the doors</p>
                             <div class="flex">
-                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">+<span id="game_8_per_second_per_item">250</span></p>
                                 <p class="text-gray-400 text-xs">R$/s</p>
                             </div>
                         </div>
@@ -432,7 +430,7 @@
                             </div>
                             <p class="text-gray-400 text-xs">Escape America</p>
                             <div class="flex">
-                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">+<span id="game_9_per_second_per_item">500</span></p>
                                 <p class="text-gray-400 text-xs">R$/s</p>
                             </div>
                         </div>
@@ -455,7 +453,7 @@
                             </div>
                             <p class="text-gray-400 text-xs">Simulate bee's</p>
                             <div class="flex">
-                                <p class="text-gray-400 text-xs">+..</p>
+                                <p class="text-gray-400 text-xs">+<span id="game_10_per_second_per_item">1000</span></p>
                                 <p class="text-gray-400 text-xs">R$/s</p>
                             </div>
                         </div>
@@ -488,8 +486,7 @@
                         </div>
                         <div class="ml-10 w-12 flex flex-col items-center">
                             <p class="font-semibold text-xs text-white">100R$</p>
-                            <button class="bg-[#f5f5f5] rounded-l text-xs font-semibold p-1 pl-2 pr-2" id="buy-game-1"
-                                button>Buy</button>
+                            <button id="upgrade-button-1" class="bg-[#f5f5f5] rounded-l text-xs font-semibold p-1 pl-2 pr-2">Buy</button>
                         </div>
                     </div>
 
@@ -507,7 +504,7 @@
                         <div class="ml-10 w-12 flex flex-col items-center">
                             <p class="font-semibold text-xs text-white">500R$</p>
                             <button class="bg-[#f5f5f5] rounded-l text-xs font-semibold p-1 pl-2 pr-2"
-                                id="buy-game-button-4">Buy</button>
+                                id="upgrade-button-2">Buy</button>
                         </div>
                     </div>
 
@@ -525,7 +522,7 @@
                         <div class="ml-10 w-12 flex flex-col items-center">
                             <p class="font-semibold text-xs text-white">1K R$</p>
                             <button class="bg-[#f5f5f5] rounded-l text-xs font-semibold p-1 pl-2 pr-2"
-                                id="buy-game-button-3">Buy</button>
+                                id="upgrade-button-3">Buy</button>
                         </div>
                     </div>
 
@@ -543,7 +540,7 @@
                         <div class="ml-10 w-12 flex flex-col items-center">
                             <p class="font-semibold text-xs text-white">3K R$</p>
                             <button class="bg-[#f5f5f5] rounded-l text-xs font-semibold p-1 pl-2 pr-2"
-                                id="buy-game-button-4">Buy</button>
+                                id="upgrade-button-4">Buy</button>
                         </div>
                     </div>
 
@@ -561,7 +558,7 @@
                         <div class="ml-10 w-12 flex flex-col items-center">
                             <p class="font-semibold text-xs text-white">7.5K R$</p>
                             <button class="bg-[#f5f5f5] rounded-l text-xs font-semibold p-1 pl-2 pr-2"
-                                id="buy-game-button-5">Buy</button>
+                                id="upgrade-button-5">Buy</button>
                         </div>
                     </div>
 
@@ -579,7 +576,7 @@
                         <div class="ml-10 w-12 flex flex-col items-center">
                             <p class="font-semibold text-xs text-white">10K R$</p>
                             <button class="bg-[#f5f5f5] rounded-l text-xs font-semibold p-1 pl-2 pr-2"
-                                id="buy-game-button-6">Buy</button>
+                                id="upgrade-button-6">Buy</button>
                         </div>
                     </div>
 
@@ -597,7 +594,7 @@
                         <div class="ml-10 w-12 flex flex-col items-center">
                             <p class="font-semibold text-xs text-white">20K R$</p>
                             <button class="bg-[#f5f5f5] rounded-l text-xs font-semibold p-1 pl-2 pr-2"
-                                id="buy-game-button-7">Buy</button>
+                                id="upgrade-button-7">Buy</button>
                         </div>
                     </div>
                 </section>
@@ -620,7 +617,7 @@
 
                         </div>
                         <div class="flex">
-                            <p class="font-semibold text-xs text-white">15</p>
+                            <p id="total-robux-display-2" class="font-semibold text-xs text-white">0</p>
                             <p class="font-semibold text-xs text-white">R$</p>
                         </div>
                     </div>
@@ -633,7 +630,7 @@
                             <p class="text-gray-400 text-xs">Robux-per-second</p>
                         </div>
                         <div class="flex">
-                            <p class="font-semibold text-xs text-white">15</p>
+                            <p id="robux-per-second-3" class="font-semibold text-xs text-white">0</p>
                             <p class="font-semibold text-xs text-white">R$/s</p>
                         </div>
                     </div>
@@ -646,7 +643,7 @@
                             <p class="text-gray-400 text-xs">Click power</p>
                         </div>
                         <div class="flex">
-                            <p class="font-semibold text-xs text-white">15</p>
+                            <p id="robux-per-click-3" class="font-semibold text-xs text-white">0</p>
                             <p class="font-semibold text-xs text-white">R$</p>
                         </div>
                     </div>
@@ -659,35 +656,13 @@
                             <p class="text-gray-400 text-xs">Total clicks</p>
                         </div>
                         <div class="flex">
-                            <p class="font-semibold text-xs text-white">15</p>
+                            <p id="total-times-clicked" class="font-semibold text-xs text-white">0</p>
                         </div>
                     </div>
+
+
 
                     <div id="stat-5" class="flex border items-center justify-between p-2 rounded-l">
-                        <div class="flex items-baseline">
-                            <div class="icon flex justify-center items-center w-10 h-10">🎮</div>
-                            <div class="flex gap-3">
-                            </div>
-                            <p class="text-gray-400 text-xs">Games</p>
-                        </div>
-                        <div class="flex">
-                            <p class="font-semibold text-xs text-white">15</p>
-                        </div>
-                    </div>
-
-                    <div id="stat-6" class="flex border items-center justify-between p-2 rounded-l">
-                        <div class="flex items-baseline">
-                            <div class="icon flex justify-center items-center w-10 h-10">⬆️</div>
-                            <div class="flex gap-3">
-                            </div>
-                            <p class="text-gray-400 text-xs">Upgrades</p>
-                        </div>
-                        <div class="flex">
-                            <p class="font-semibold text-xs text-white">15</p>
-                        </div>
-                    </div>
-
-                    <div id="stat-7" class="flex border items-center justify-between p-2 rounded-l">
                         <div class="flex items-baseline">
                             <div class="icon flex justify-center items-center w-10 h-10">⏱️</div>
                             <div class="flex gap-3">
@@ -695,23 +670,13 @@
                             <p class="text-gray-400 text-xs">Playtime</p>
                         </div>
                         <div class="flex">
-                            <p class="font-semibold text-xs text-white">15</p>
+                            <p id="play_time_hour" class="font-semibold text-xs text-white">0</p>
+                            <p class="font-semibold text-xs text-white mr-1">h</p> 
+                            <p  id="play_time_minute" class="font-semibold text-xs text-white">0</p>
                             <p class="font-semibold text-xs text-white">m</p>
                         </div>
                     </div>
 
-                    <div id="stat-8" class="flex border items-center justify-between p-2 rounded-l">
-                        <div class="flex items-baseline">
-                            <div class="icon flex justify-center items-center w-10 h-10">🏆</div>
-                            <div class="flex gap-3">
-                            </div>
-                            <p class="text-gray-400 text-xs">Best CPS</p>
-                        </div>
-                        <div class="flex">
-                            <p class="font-semibold text-xs text-white">15</p>
-                            <p class="font-semibold text-xs text-white">R$/s</p>
-                        </div>
-                    </div>
                 </section>
             </section>
 
