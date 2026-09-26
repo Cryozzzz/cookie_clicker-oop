@@ -45,6 +45,12 @@ click_button.addEventListener("click", function () {
     robux += total_robux_per_click;
     total_robux += total_robux_per_click;
     total_times_clicked++
+
+        click_button.classList.add("scale-[1.04]");
+
+    setTimeout(function () {
+        click_button.classList.remove("scale-[1.04]");
+    }, 100);
     update_ui();
 });
 
