@@ -1,0 +1,51 @@
+.ocean-theme {
+    background-color: #c8f3f7;
+}
+.ocean-theme .section-ocean {
+    background-color: #062F4F;
+    border-color: #FFD166;
+}
+.ocean-theme .cards {
+    background-color: #074C75;
+}
+.ocean-theme .card-b {
+    border-color: #0ea5c6;
+}
+.ocean-theme .header {
+    border-color: #FFD166;
+}
+.ocean-theme .icon-h {
+    background-color: #FFD166;
+}
+.ocean-theme .save {
+    background-color: #062F4F;
+}
+.ocean-theme .display {
+    border-color: #FFD166;
+}
+.ocean-theme .choice {
+    border-color: #FFD166;
+}
+.ocean-theme #games-choice.bg-white {
+    background-color: #FFD166;
+}
+.ocean-theme #upgrades-choice.bg-white {
+    background-color: #FFD166;
+}
+.ocean-theme #stats-choice.bg-white {
+    background-color: #FFD166;
+}
+.ocean-theme .ach-box {
+    background-color: #074C75;
+    border-color: #0ea5c6;;
+}
+.ocean-theme .logo {
+    background-color: #ffff;
+    border-radius: 40%;
+}
+.ocean-theme .roblox-logo {
+    background-color: #fefefe;
+    border-radius: 40%;
+}
+
+
