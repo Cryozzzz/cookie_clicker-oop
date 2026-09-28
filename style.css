@@ -1,3 +1,7 @@
+/* =========================
+      OCEAN THEME
+   ========================= */
+
 .ocean-theme {
     background-color: #c8f3f7;
 }
@@ -52,6 +56,10 @@
     border-color: #0ea5c6;
 }
 
+/* =========================
+      JUNGLE THEME
+   ========================= */
+
 .jungle-theme {
     background-color: #e7f3d6;
 }
@@ -94,7 +102,7 @@
     border-color: #3f7d45;
 }
 .jungle-theme .logo {
-    background-color: #ffff;
+    background-color: #fefefe;
     border-radius: 40%;
 }
 .jungle-theme .roblox-logo {
@@ -105,6 +113,83 @@
     border-top-right-radius: 10%;
 }
 
+/* =========================
+      GALAXY THEME
+   ========================= */
+
+.galaxy-theme {
+    background-color: #10072b;
+}
+.galaxy-theme .section-ocean {
+    background-color: #10072b;
+    border-color: #55e6e1;
+}
+.galaxy-theme .cards {
+    background-color: #24104f;
+}
+.galaxy-theme .card-b {
+    border-color: #7047eb;
+}
+.galaxy-theme .header {
+    border-color: #55e6e1;
+}
+.galaxy-theme .icon-h {
+    background-color: #55e6e1;
+}
+.galaxy-theme .save {
+    background-color: #10072b;
+}
+.galaxy-theme .display {
+    border-color: #55e6e1;
+}
+.galaxy-theme .choice {
+    border-color: #55e6e1;
+}
+.galaxy-theme #games-choice.bg-white {
+    background-color: #55e6e1;
+}
+.galaxy-theme #upgrades-choice.bg-white {
+    background-color: #55e6e1;
+}
+.galaxy-theme #stats-choice.bg-white {
+    background-color: #55e6e1;
+}
+.galaxy-theme .ach-box {
+    background-color: #24104f;
+    border-color: #7047eb;
+}
+.galaxy-theme .logo {
+    background-color: #f1ecff;
+    border-radius: 40%;
+}
+.galaxy-theme .roblox-logo {
+    background-color: #f1ecff;
+    border-radius: 20%;
+    border: solid 5px #df5ad6;
+    outline: 4px solid #7047eb;
+
+}
+.galaxy-theme .r {
+    color: #a67cff;
+}
+.galaxy-theme .num {
+    color: #f1ecff;
+}
+#theme-1.theme-selected {
+    box-shadow: 0 0 3px 3px #ffffff;
+}
+
+#theme-2.theme-selected {
+    box-shadow: 0 0 3px 3px #38bdf8;
+}
+
+#theme-3.theme-selected {
+    box-shadow: 0 0 3px 3px #22c55e;
+}
+
+#theme-4.theme-selected {
+    box-shadow: 0 0 3px 3px #a855f7;
+}
 
 
 

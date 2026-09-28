@@ -216,6 +216,10 @@ function update_ui() {
     if (total_robux >= jungle_theme_requirement) {
         document.getElementById("jungle-lock").textContent = "Unlocked";
     }
+    if (total_robux >= galaxy_theme_requirement) {
+        document.getElementById("galaxy-lock").textContent = "Unlocked";
+    }
+
 }
 
 const buy_game_button_1 = document.getElementById("buy-game-button-1");
