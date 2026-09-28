@@ -211,6 +211,10 @@ function update_ui() {
 
     if (total_times_clicked >= ocean_theme_requirement) {
         document.getElementById("ocean-lock").textContent = "Unlocked";
+
+    }
+    if (total_robux >= jungle_theme_requirement) {
+        document.getElementById("jungle-lock").textContent = "Unlocked";
     }
 }
 

@@ -52,5 +52,60 @@
     border-color: #0ea5c6;
 }
 
+.jungle-theme {
+    background-color: #e7f3d6;
+}
+.jungle-theme .section-ocean {
+    background-color: #17351f;
+    border-color: #f7c566;
+}
+.jungle-theme .cards {
+    background-color: #245438;
+}
+.jungle-theme .card-b {
+    border-color: #3f7d45;
+}
+.jungle-theme .header {
+    border-color: #f7c566;
+}
+.jungle-theme .icon-h {
+    background-color: #f7c566;
+}
+.jungle-theme .save {
+    background-color: #17351f;
+}
+.jungle-theme .display {
+    border-color: #f7c566;
+}
+.jungle-theme .choice {
+    border-color: #f7c566;
+}
+.jungle-theme #games-choice.bg-white {
+    background-color: #f7c566;
+}
+.jungle-theme #upgrades-choice.bg-white {
+    background-color: #f7c566;
+}
+.jungle-theme #stats-choice.bg-white {
+    background-color: #f7c566;
+}
+.jungle-theme .ach-box {
+    background-color: #245438;
+    border-color: #3f7d45;
+}
+.jungle-theme .logo {
+    background-color: #ffff;
+    border-radius: 40%;
+}
+.jungle-theme .roblox-logo {
+    background-color: #fefefe;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+
+
 
 
