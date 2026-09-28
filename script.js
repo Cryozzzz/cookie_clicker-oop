@@ -270,9 +270,10 @@ class upgrade_games{
 
         if (robux >= this.upgrade_cost) {
             robux -= this.upgrade_cost;
-            total_robux_per_click *= this.click_multiplier;
+            click_multiplier += this.click_multiplier;
             robux_multiplier *= this.robux_multiplier;
             this.purchase = true
+            total_robux_per_click = base_robux_per_click * click_multiplier;
             update_ui();
         }
         else {
@@ -285,11 +286,11 @@ class upgrade_games{
 }
 
 var upgrade_1 = new upgrade_games(100,1,3,false)
-var upgrade_2 = new upgrade_games(500,1.5,1,false)
+var upgrade_2 = new upgrade_games(500,1.5,0,false)
 var upgrade_3 = new upgrade_games(1000,1,5,false)
-var upgrade_4 = new upgrade_games(3000,2,1,false)
+var upgrade_4 = new upgrade_games(3000,2,0,false)
 var upgrade_5 = new upgrade_games(7500,1,10,false)
-var upgrade_6 = new upgrade_games(10000,4,1,false)
+var upgrade_6 = new upgrade_games(10000,4,0,false)
 var upgrade_7 = new upgrade_games(20000,1,20,false)
 
 const upgrade_button_1 = document.getElementById("upgrade-button-1")
