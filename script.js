@@ -35,8 +35,8 @@ var game_9_production = 0;
 var game_10_production = 0;
 
 function calculate_robux_per_second() {
-    total_robux_per_second = base_robux_per_second * robux_multiplier
-
+    total_robux_per_second = base_robux_per_second * robux_multiplier 
+    
 }
 setInterval(calculate_robux_per_second, 10)
 
@@ -45,26 +45,26 @@ click_button.addEventListener("click", function () {
     robux += total_robux_per_click;
     total_robux += total_robux_per_click;
     total_times_clicked++
-
-    click_button.classList.add("scale-[1.04]");
-
-    setTimeout(function () {
-        click_button.classList.remove("scale-[1.04]");
-    }, 100);
     update_ui();
 });
 
 class Game {
+    id;
     cost;
     per_second_per_item;
     name;
     amount;
 
-    constructor(game_cost, per_second_per_item, name, amount) {
+    constructor(id,game_cost, per_second_per_item, name, amount) {
+        this.id = id;
         this.game_cost = game_cost;
         this.per_second_per_item = per_second_per_item;
         this.name = name;
         this.amount = amount;
+        this.amount_display = document.getElementById(`game_${id}_amount`);
+        this.game_cost_display = document.getElementById(`game_${id}_cost`);
+        this.per_second_display = document.getElementById(`game_${id}_per_second_per_item`);
+
     }
 
     buy() {
@@ -80,64 +80,28 @@ class Game {
     }
 }
 
-var game_1 = new Game(10, 1, "Game 1", 0);
-var game_2 = new Game(50, 2, "Game 2", 0);
-var game_3 = new Game(100, 5, "Game 3", 0);
-var game_4 = new Game(250, 15, "Game 4", 0);
-var game_5 = new Game(700, 30, "Game 5", 0);
-var game_6 = new Game(1000, 60, "Game 6", 0);
-var game_7 = new Game(1250, 120, "Game 7", 0);
-var game_8 = new Game(1800, 250, "Game 8", 0);
-var game_9 = new Game(2000, 500, "Game 9", 0);
-var game_10 = new Game(20, 1000, "Game 10", 0);
+var game_1 = new Game(1,10, 1, "Game 1", 0);
+var game_2 = new Game(2,50, 2, "Game 2", 0);
+var game_3 = new Game(3,100, 5, "Game 3", 0);
+var game_4 = new Game(4,250, 15, "Game 4", 0);
+var game_5 = new Game(5,700, 30, "Game 5", 0);
+var game_6 = new Game(6,1000, 60, "Game 6", 0);
+var game_7 = new Game(7,1250, 120, "Game 7", 0);
+var game_8 = new Game(8,1800, 250, "Game 8", 0);
+var game_9 = new Game(9,2000, 500, "Game 9", 0);
+var game_10 = new Game(10,20, 1000, "Game 10", 0); 
 
 const games = [game_1, game_2, game_3, game_4, game_5, game_6, game_7, game_8, game_9, game_10];
-const game_amount_displays = [
-    document.getElementById("game_1_amount"),
-    document.getElementById("game_2_amount"),
-    document.getElementById("game_3_amount"),
-    document.getElementById("game_4_amount"),
-    document.getElementById("game_5_amount"),
-    document.getElementById("game_6_amount"),
-    document.getElementById("game_7_amount"),
-    document.getElementById("game_8_amount"),
-    document.getElementById("game_9_amount"),
-    document.getElementById("game_10_amount")
-];
-const game_cost_displays = [
-    document.getElementById("game_1_cost"),
-    document.getElementById("game_2_cost"),
-    document.getElementById("game_3_cost"),
-    document.getElementById("game_4_cost"),
-    document.getElementById("game_5_cost"),
-    document.getElementById("game_6_cost"),
-    document.getElementById("game_7_cost"),
-    document.getElementById("game_8_cost"),
-    document.getElementById("game_9_cost"),
-    document.getElementById("game_10_cost")
-];
-const game_per_second_per_item_displays = [
-    document.getElementById("game_1_per_second_per_item"),
-    document.getElementById("game_2_per_second_per_item"),
-    document.getElementById("game_3_per_second_per_item"),
-    document.getElementById("game_4_per_second_per_item"),
-    document.getElementById("game_5_per_second_per_item"),
-    document.getElementById("game_6_per_second_per_item"),
-    document.getElementById("game_7_per_second_per_item"),
-    document.getElementById("game_8_per_second_per_item"),
-    document.getElementById("game_9_per_second_per_item"),
-    document.getElementById("game_10_per_second_per_item")
-];
 
 var play_time_minute_display = document.getElementById("play_time_minute")
 var play_time_hour_display = document.getElementById("play_time_hour")
 function play_time() {
-    if (play_time_minute == 60) {
+    if(play_time_minute == 60){
         play_time_minute -= 60
-        play_time_hour++
+        play_time_hour ++
     }
-    else {
-        play_time_minute++
+    else{
+        play_time_minute ++
     }
 
 
@@ -148,7 +112,7 @@ setInterval(play_time, 60000)
 
 function update_ui() {
 
-    base_robux_per_second = 0;
+    base_robux_per_second = 0; 
 
     games.forEach((game) => {
         base_robux_per_second += game.per_second_per_item * game.amount;
@@ -165,53 +129,30 @@ function update_ui() {
     game_9_production = game_9.per_second_per_item * game_9.amount;
     game_10_production = game_10.per_second_per_item * game_10.amount;
 
-    document.getElementById("my-game-1-amount").textContent = game_1.amount;
-    document.getElementById("my-game-2-amount").textContent = game_2.amount;
-    document.getElementById("my-game-3-amount").textContent = game_3.amount;
-    document.getElementById("my-game-4-amount").textContent = game_4.amount;
-    document.getElementById("my-game-5-amount").textContent = game_5.amount;
-    document.getElementById("my-game-6-amount").textContent = game_6.amount;
-    document.getElementById("my-game-7-amount").textContent = game_7.amount;
-    document.getElementById("my-game-8-amount").textContent = game_8.amount;
-    document.getElementById("my-game-9-amount").textContent = game_9.amount;
-    document.getElementById("my-game-10-amount").textContent = game_10.amount;
 
-
-    robux_per_second_display_1.textContent = total_robux_per_second;
-    robux_per_second_display_2.textContent = total_robux_per_second;
-    robux_per_second_display_3.textContent = total_robux_per_second;
-    robux_per_click_display_1.textContent = total_robux_per_click;
-    robux_per_click_display_2.textContent = total_robux_per_click;
-    robux_per_click_display_3.textContent = total_robux_per_click;
+    let robux_per_click_displays = document.getElementsByClassName("robux-per-click-display")
+    for(let display of robux_per_click_displays){display.textContent = total_robux_per_click}
+    let robux_per_second_displays = document.getElementsByClassName("robux-per-second-display")
+    for(let display of robux_per_second_displays){display.textContent = total_robux_per_second}
+    let robux_displays = document.getElementsByClassName("robux-display");
+    for(let display of robux_displays){display.textContent = robux}
+    let total_robux_displays = document.getElementsByClassName("total-robux-display")
+    for(let display of total_robux_displays){display.textContent = total_robux}
     total_times_clicked_display.textContent = total_times_clicked;
-    robux_display_1.textContent = robux;
-    robux_display_2.textContent = robux;
-    total_robux_display_1.textContent = total_robux;
-    total_robux_display_2.textContent = total_robux;
     play_time_minute_display.textContent = play_time_minute
     play_time_hour_display.textContent = play_time_hour
 
     games.forEach((game, index) => {
-        if (game_amount_displays[index]) {
-            game_amount_displays[index].textContent = game.amount;
+        if (game.amount_display) {
+            game.amount_display.textContent = game.amount;
         }
-        if (game_cost_displays[index]) {
-            game_cost_displays[index].textContent = game.game_cost + "R$";
+        if (game.game_cost_display) {
+            game.game_cost_display.textContent = game.game_cost + "R$";
         }
-        if (game_per_second_per_item_displays[index]) {
-            game_per_second_per_item_displays[index].textContent = game.per_second_per_item;
+        if (game.per_second_display) {
+           game.per_second_display.textContent = game.per_second_per_item;
         }
     });
-
-    // if (total_times_clicked >= ocean_theme_requirement) {
-    //     current_theme = "ocean";
-    // }
-
-    // apply_theme();
-
-    if (total_times_clicked >= ocean_theme_requirement) {
-        document.getElementById("ocean-lock").textContent = "Unlocked";
-    }
 }
 
 const buy_game_button_1 = document.getElementById("buy-game-button-1");
@@ -257,51 +198,26 @@ const game_section = document.getElementById("games-section");
 const upgrade_section = document.getElementById("upgrades-section");
 const stat_section = document.getElementById("stats-section");
 
-game_choice.classList.add("bg-white");
-game_choice.classList.remove("text-gray-300");
-
 game_choice.addEventListener("click", function () {
     game_section.classList.remove("hidden");
     upgrade_section.classList.add("hidden");
     stat_section.classList.add("hidden");
-    game_choice.classList.add("bg-white");
-    upgrade_choice.classList.remove("bg-white");
-    stat_choice.classList.remove("bg-white");
-    game_choice.classList.remove("text-gray-300")
-    upgrade_choice.classList.add("text-gray-300")
-    stat_choice.classList.add("text-gray-300")
-
-
 });
 
 upgrade_choice.addEventListener("click", function () {
     game_section.classList.add("hidden");
     upgrade_section.classList.remove("hidden");
     stat_section.classList.add("hidden");
-    upgrade_choice.classList.add("bg-white");
-    game_choice.classList.remove("bg-white");
-    stat_choice.classList.remove("bg-white");
-    upgrade_choice.classList.remove("text-gray-300")
-    game_choice.classList.add("text-gray-300")
-    stat_choice.classList.add("text-gray-300")
-
 });
 
 stat_choice.addEventListener("click", function () {
     game_section.classList.add("hidden");
     upgrade_section.classList.add("hidden");
     stat_section.classList.remove("hidden");
-    stat_choice.classList.add("bg-white");
-    game_choice.classList.remove("bg-white");
-    upgrade_choice.classList.remove("bg-white");
-    stat_choice.classList.remove("text-gray-300")
-    game_choice.classList.add("text-gray-300")
-    upgrade_choice.classList.add("text-gray-300")
-
 });
 
 
-class upgrade_games {
+class upgrade_games{
     robux_multiplier;
     click_multiplier;
     upgrade_cost;
@@ -354,7 +270,7 @@ const upgrade_button_5 = document.getElementById("upgrade-button-5")
 const upgrade_button_6 = document.getElementById("upgrade-button-6")
 const upgrade_button_7 = document.getElementById("upgrade-button-7")
 
-upgrade_button_1.addEventListener("click", upgrade_1.buy_upgrade.bind(upgrade_1))
+upgrade_button_1.addEventListener("click",upgrade_1.buy_upgrade.bind(upgrade_1))
 upgrade_button_2.addEventListener("click", upgrade_2.buy_upgrade.bind(upgrade_2))
 upgrade_button_3.addEventListener("click", upgrade_3.buy_upgrade.bind(upgrade_3))
 upgrade_button_4.addEventListener("click", upgrade_4.buy_upgrade.bind(upgrade_4))
@@ -408,7 +324,7 @@ function achievement_5_requirement() {
     if (game_10.amount === 1) {
 
         achievement_5 = true
-
+        
 
     }
 }
@@ -426,7 +342,7 @@ function achievement_checker() {
 
     achievement_1_requirement()
     achievement_2_requirement()
-    achievement_3_requirement()
+    achievement_3_requirement()    
     achievement_4_requirement()
     achievement_5_requirement()
     achievement_6_requirement()
