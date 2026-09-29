@@ -1,69 +1,51 @@
-
-
-
-.roblox-logo {
-    width: 5em;
+.ocean-theme {
+    background-color: #c8f3f7;
+}
+.ocean-theme .section-ocean {
+    background-color: #062F4F;
+    border-color: #FFD166;
+}
+.ocean-theme .cards {
+    background-color: #074C75;
+}
+.ocean-theme .card-b {
+    border-color: #0ea5c6;
+}
+.ocean-theme .header {
+    border-color: #FFD166;
+}
+.ocean-theme .icon-h {
+    background-color: #FFD166;
+}
+.ocean-theme .save {
+    background-color: #062F4F;
+}
+.ocean-theme .display {
+    border-color: #FFD166;
+}
+.ocean-theme .choice {
+    border-color: #FFD166;
+}
+.ocean-theme #games-choice.bg-white {
+    background-color: #FFD166;
+}
+.ocean-theme #upgrades-choice.bg-white {
+    background-color: #FFD166;
+}
+.ocean-theme #stats-choice.bg-white {
+    background-color: #FFD166;
+}
+.ocean-theme .ach-box {
+    background-color: #074C75;
+    border-color: #0ea5c6;;
+}
+.ocean-theme .logo {
+    background-color: #ffff;
+    border-radius: 40%;
+}
+.ocean-theme .roblox-logo {
+    background-color: #fefefe;
+    border-radius: 40%;
 }
 
-.logo{
-    background-color: black;
-    width: 3rem;
-    height: 2.5rem;
-    margin:auto;
-}
 
-.logo-text {
-    color: white;
-    font-size: 2em;
-    text-align: center;
-    margin: 0;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: solid 1px;
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
-.header-container-left {
-    display: flex;
-    gap: 1em;
-}
-
-.header-container-right {
-    display: flex;
-
-}
-
-.header-margin {
-    margin: auto;
-}
-.header-gap {
-    margin-right: 1em;
-    display: flex;
-}
-
-.robux-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.achievement-con {
-    display: grid;
-    grid-template-columns: repeat(3, 5em);
-    grid-template-rows: repeat(2, 4em);
-}
-
-.thema-box{
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-}
-
-.game-class {
-    display: flex;
-    gap: 3em;
-}
