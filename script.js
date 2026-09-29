@@ -35,8 +35,8 @@ var game_9_production = 0;
 var game_10_production = 0;
 
 function calculate_robux_per_second() {
-    total_robux_per_second = base_robux_per_second * robux_multiplier 
-    
+    total_robux_per_second = base_robux_per_second * robux_multiplier
+
 }
 setInterval(calculate_robux_per_second, 10)
 
@@ -45,6 +45,12 @@ click_button.addEventListener("click", function () {
     robux += total_robux_per_click;
     total_robux += total_robux_per_click;
     total_times_clicked++
+
+    click_button.classList.add("scale-[1.04]");
+
+    setTimeout(function () {
+        click_button.classList.remove("scale-[1.04]");
+    }, 100);
     update_ui();
 });
 
@@ -96,12 +102,12 @@ const games = [game_1, game_2, game_3, game_4, game_5, game_6, game_7, game_8, g
 var play_time_minute_display = document.getElementById("play_time_minute")
 var play_time_hour_display = document.getElementById("play_time_hour")
 function play_time() {
-    if(play_time_minute == 60){
+    if (play_time_minute == 60) {
         play_time_minute -= 60
-        play_time_hour ++
+        play_time_hour++
     }
-    else{
-        play_time_minute ++
+    else {
+        play_time_minute++
     }
 
 
@@ -112,7 +118,7 @@ setInterval(play_time, 60000)
 
 function update_ui() {
 
-    base_robux_per_second = 0; 
+    base_robux_per_second = 0;
 
     games.forEach((game) => {
         base_robux_per_second += game.per_second_per_item * game.amount;
@@ -153,6 +159,24 @@ function update_ui() {
            game.per_second_display.textContent = game.per_second_per_item;
         }
     });
+
+    // if (total_times_clicked >= ocean_theme_requirement) {
+    //     current_theme = "ocean";
+    // }
+
+    // apply_theme();
+
+    if (total_times_clicked >= ocean_theme_requirement) {
+        document.getElementById("ocean-lock").textContent = "Unlocked";
+
+    }
+    if (total_robux >= jungle_theme_requirement) {
+        document.getElementById("jungle-lock").textContent = "Unlocked";
+    }
+    if (total_robux >= galaxy_theme_requirement) {
+        document.getElementById("galaxy-lock").textContent = "Unlocked";
+    }
+
 }
 
 const buy_game_button_1 = document.getElementById("buy-game-button-1");
@@ -198,26 +222,51 @@ const game_section = document.getElementById("games-section");
 const upgrade_section = document.getElementById("upgrades-section");
 const stat_section = document.getElementById("stats-section");
 
+game_choice.classList.add("bg-white");
+game_choice.classList.remove("text-gray-300");
+
 game_choice.addEventListener("click", function () {
     game_section.classList.remove("hidden");
     upgrade_section.classList.add("hidden");
     stat_section.classList.add("hidden");
+    game_choice.classList.add("bg-white");
+    upgrade_choice.classList.remove("bg-white");
+    stat_choice.classList.remove("bg-white");
+    game_choice.classList.remove("text-gray-300")
+    upgrade_choice.classList.add("text-gray-300")
+    stat_choice.classList.add("text-gray-300")
+
+
 });
 
 upgrade_choice.addEventListener("click", function () {
     game_section.classList.add("hidden");
     upgrade_section.classList.remove("hidden");
     stat_section.classList.add("hidden");
+    upgrade_choice.classList.add("bg-white");
+    game_choice.classList.remove("bg-white");
+    stat_choice.classList.remove("bg-white");
+    upgrade_choice.classList.remove("text-gray-300")
+    game_choice.classList.add("text-gray-300")
+    stat_choice.classList.add("text-gray-300")
+
 });
 
 stat_choice.addEventListener("click", function () {
     game_section.classList.add("hidden");
     upgrade_section.classList.add("hidden");
     stat_section.classList.remove("hidden");
+    stat_choice.classList.add("bg-white");
+    game_choice.classList.remove("bg-white");
+    upgrade_choice.classList.remove("bg-white");
+    stat_choice.classList.remove("text-gray-300")
+    game_choice.classList.add("text-gray-300")
+    upgrade_choice.classList.add("text-gray-300")
+
 });
 
 
-class upgrade_games{
+class upgrade_games {
     robux_multiplier;
     click_multiplier;
     upgrade_cost;
@@ -254,13 +303,13 @@ class upgrade_games{
 
 }
 
-var upgrade_1 = new upgrade_games(100,1,3,false)
-var upgrade_2 = new upgrade_games(500,1.5,0,false)
-var upgrade_3 = new upgrade_games(1000,1,5,false)
-var upgrade_4 = new upgrade_games(3000,2,0,false)
-var upgrade_5 = new upgrade_games(7500,1,10,false)
-var upgrade_6 = new upgrade_games(10000,4,0,false)
-var upgrade_7 = new upgrade_games(20000,1,20,false)
+var upgrade_1 = new upgrade_games(100, 1, 3, false)
+var upgrade_2 = new upgrade_games(500, 1.5, 1, false)
+var upgrade_3 = new upgrade_games(1000, 1, 5, false)
+var upgrade_4 = new upgrade_games(3000, 2, 1, false)
+var upgrade_5 = new upgrade_games(7500, 1, 10, false)
+var upgrade_6 = new upgrade_games(10000, 4, 1, false)
+var upgrade_7 = new upgrade_games(20000, 1, 20, false)
 
 const upgrade_button_1 = document.getElementById("upgrade-button-1")
 const upgrade_button_2 = document.getElementById("upgrade-button-2")
@@ -270,7 +319,7 @@ const upgrade_button_5 = document.getElementById("upgrade-button-5")
 const upgrade_button_6 = document.getElementById("upgrade-button-6")
 const upgrade_button_7 = document.getElementById("upgrade-button-7")
 
-upgrade_button_1.addEventListener("click",upgrade_1.buy_upgrade.bind(upgrade_1))
+upgrade_button_1.addEventListener("click", upgrade_1.buy_upgrade.bind(upgrade_1))
 upgrade_button_2.addEventListener("click", upgrade_2.buy_upgrade.bind(upgrade_2))
 upgrade_button_3.addEventListener("click", upgrade_3.buy_upgrade.bind(upgrade_3))
 upgrade_button_4.addEventListener("click", upgrade_4.buy_upgrade.bind(upgrade_4))
@@ -324,7 +373,7 @@ function achievement_5_requirement() {
     if (game_10.amount === 1) {
 
         achievement_5 = true
-        
+
 
     }
 }
@@ -342,7 +391,7 @@ function achievement_checker() {
 
     achievement_1_requirement()
     achievement_2_requirement()
-    achievement_3_requirement()    
+    achievement_3_requirement()
     achievement_4_requirement()
     achievement_5_requirement()
     achievement_6_requirement()
