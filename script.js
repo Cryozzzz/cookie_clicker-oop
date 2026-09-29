@@ -9,17 +9,7 @@ var click_multiplier = 1.0
 var total_times_clicked = 0
 var play_time_minute = 0
 var play_time_hour = 0
-var total_robux_display_1 = document.getElementById("total-robux-display-1");
-var total_robux_display_2 = document.getElementById("total-robux-display-2");
-var robux_per_click_display_1 = document.getElementById("robux-per-click-1");
-var robux_per_click_display_2 = document.getElementById("robux-per-click-2");
-var robux_per_click_display_3 = document.getElementById("robux-per-click-3");
 var total_times_clicked_display = document.getElementById("total-times-clicked")
-var robux_display_1 = document.getElementById("robux-display-1");
-var robux_display_2 = document.getElementById("robux-display-2");
-var robux_per_second_display_1 = document.getElementById("robux-per-second-1");
-var robux_per_second_display_2 = document.getElementById("robux-per-second-2");
-var robux_per_second_display_3 = document.getElementById("robux-per-second-3");
 
 const click_button = document.getElementById("click-button");
 
@@ -67,6 +57,7 @@ class Game {
         this.per_second_per_item = per_second_per_item;
         this.name = name;
         this.amount = amount;
+        this.my_game_amount_display = document.getElementById(`my-game-${id}-amount`)
         this.amount_display = document.getElementById(`game_${id}_amount`);
         this.game_cost_display = document.getElementById(`game_${id}_cost`);
         this.per_second_display = document.getElementById(`game_${id}_per_second_per_item`);
@@ -135,7 +126,6 @@ function update_ui() {
     game_9_production = game_9.per_second_per_item * game_9.amount;
     game_10_production = game_10.per_second_per_item * game_10.amount;
 
-
     let robux_per_click_displays = document.getElementsByClassName("robux-per-click-display")
     for(let display of robux_per_click_displays){display.textContent = total_robux_per_click}
     let robux_per_second_displays = document.getElementsByClassName("robux-per-second-display")
@@ -151,6 +141,9 @@ function update_ui() {
     games.forEach((game, index) => {
         if (game.amount_display) {
             game.amount_display.textContent = game.amount;
+        }
+        if (game.my_game_amount_display){
+            game.my_game_amount_display.textContent = game.amount;
         }
         if (game.game_cost_display) {
             game.game_cost_display.textContent = game.game_cost + "R$";
