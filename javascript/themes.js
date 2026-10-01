@@ -34,7 +34,7 @@ function clear_theme_selection() {
  
 ocean_theme.addEventListener("click", function () { 
  
-    if (total_times_clicked >= ocean_theme_requirement) { 
+    if (manager.total_times_clicked >= ocean_theme_requirement) {
         current_theme = "ocean"; 
         clear_theme_selection();
         ocean_theme.classList.add("theme-selected");
@@ -44,7 +44,7 @@ ocean_theme.addEventListener("click", function () {
  
 jungle_theme.addEventListener("click", function () { 
  
-    if (total_robux >= jungle_theme_requirement) { 
+    if (manager.total_robux >= jungle_theme_requirement) {
         current_theme = "jungle"; 
         clear_theme_selection();
         jungle_theme.classList.add("theme-selected");
@@ -55,7 +55,7 @@ jungle_theme.addEventListener("click", function () {
  
 galaxy_theme.addEventListener("click", function () { 
  
-    if (total_robux >= galaxy_theme_requirement) { 
+    if (manager.total_robux >= galaxy_theme_requirement) {
         current_theme = "galaxy"; 
         clear_theme_selection();
         galaxy_theme.classList.add("theme-selected");

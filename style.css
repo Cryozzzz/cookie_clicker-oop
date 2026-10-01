@@ -191,6 +191,14 @@
     box-shadow: 0 0 3px 3px #a855f7;
 }
 
+.golden-pulse {
+    animation: golden-robux-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes golden-robux-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
 
 
 
