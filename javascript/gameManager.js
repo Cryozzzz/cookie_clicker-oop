@@ -27,16 +27,16 @@ class game_manger {
     }
     init_games_and_upgrades() {
         this.games = [
-            new Game(1, 10, 1, "Game 1",),
-            new Game(2, 50, 2, "Game 2",),
-            new Game(3, 100, 5, "Game 3",),
-            new Game(4, 250, 15, "Game 4",),
-            new Game(5, 700, 30, "Game 5",),
-            new Game(6, 1000, 60, "Game 6",),
-            new Game(7, 1250, 120, "Game 7",),
-            new Game(8, 1800, 250, "Game 8",),
-            new Game(9, 3500, 500, "Game 9",),
-            new Game(10, 20, 1000, "Game 10",),
+            new Game(1, 10, 1, "Arsenal",),
+            new Game(2, 50, 2, "Blox fruits",),
+            new Game(3, 100, 5, "Adopt me ",),
+            new Game(4, 250, 15, "Rivals",),
+            new Game(5, 700, 30, "Deepwoken",),
+            new Game(6, 1000, 60, "Brookhaven",),
+            new Game(7, 1250, 120, "Blade ball",),
+            new Game(8, 1800, 250, "Doors",),
+            new Game(9, 3500, 500, "Dead rails",),
+            new Game(10, 7000, 1000, "Bee Swarm Simulator",),
         ];
 
         this.upgrades = [
@@ -262,7 +262,7 @@ class game_manger {
     }
 
     schedule_golden_robux() {
-        const delay = 5000 + Math.random() * 10000;
+        const delay = 30000 + Math.random() * 60000;
         setTimeout(() => this.golden_robux_position(), delay);
     }
 
